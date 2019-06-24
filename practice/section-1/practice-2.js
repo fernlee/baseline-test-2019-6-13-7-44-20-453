@@ -1,5 +1,6 @@
 'use strict';
 
 function collectSameElements(collectionA, collectionB) {
-  return [...collectionB.flat(), ...collectionA].filter((item, index, arr) => arr.indexOf(item) !== index);
+  return collectionA.filter(item => collectionB.flat().indexOf(item) > -1);
+
 }
